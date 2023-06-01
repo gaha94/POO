@@ -19,6 +19,9 @@ class Automovil extends Vehiculo implements Electrico{
     private double consumoCombustible;
     Scanner sc = new Scanner (System.in);
 
+    public Automovil(){
+    }
+
     public int getNumAsientos() {
         return numAsientos;
     }
@@ -35,17 +38,12 @@ class Automovil extends Vehiculo implements Electrico{
         this.consumoCombustible = consumoCombustible;
     }
 
-    public Scanner getSc() {
-        return sc;
+    public int getId() {
+        return id;
     }
 
-    public void setSc(Scanner sc) {
-        this.sc = sc;
-    }
-
-    
-    public Automovil(int id) {
-        super(id);
+    public void setId(int id) {
+        this.id = id;
     }
 
 
@@ -55,13 +53,14 @@ class Automovil extends Vehiculo implements Electrico{
         return this.obtenerTipo();
     }
 
-    @Override
-    public double calcularCostoAlquiler(int horas) {
+    public double calcularCostoAlquiler() {
         System.out.println("El precio por hora es de 30 soles");
         System.out.println("¿Cuantas horas manejo el vehiculo?");
-        int hour = sc.nextInt();
-        int b = hour*30;
+      int horas =sc.nextInt();
+        int hour = horas;
+        int b = hour*20;
         return b;
+        
     }
 
     @Override
@@ -77,6 +76,11 @@ class Automovil extends Vehiculo implements Electrico{
     @Override
     public void cargarBateria() {
         System.out.println("Cargando bateria");
+    }
+
+    @Override
+    public double calcularCostoAlquiler(int horas) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
    
     }

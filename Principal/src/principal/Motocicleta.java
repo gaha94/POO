@@ -31,8 +31,7 @@ Scanner sc = new Scanner (System.in);
     }
 
 
-    public Motocicleta(int id) {
-        super(id);
+    public Motocicleta(){
     }
 
     void Motocicleta() {
@@ -43,11 +42,11 @@ Scanner sc = new Scanner (System.in);
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
-    @Override
-    public double calcularCostoAlquiler(int horas) {
+    public double calcularCostoAlquiler() {
         System.out.println("El precio por hora es de 20 soles");
         System.out.println("¿Cuantas horas manejo el vehiculo?");
-        int hour = sc.nextInt();
+        int horas = sc.nextInt();
+        int hour = horas;
         int b = hour*20;
         return b;
     }
@@ -64,5 +63,10 @@ Scanner sc = new Scanner (System.in);
     @Override
     public void cargarBateria() {
         System.out.println("Cargando bateria");
+    }
+
+    @Override
+    public double calcularCostoAlquiler(int horas) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }

@@ -14,6 +14,17 @@ public class Principal {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+    Automovil a = new Automovil();
+    Motocicleta m = new Motocicleta();
+    Bicicleta b = new Bicicleta();
+    a.calcularCostoAlquiler();
+    a.cargarBateria();
+    m.calcularCostoAlquiler();
+    m.getAutonomia();
+    m.cargarBateria();
+    b.calcularCostoAlquiler();
+    
+    
     
     }
     

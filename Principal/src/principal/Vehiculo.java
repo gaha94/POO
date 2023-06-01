@@ -10,17 +10,5 @@ package principal;
  */
 public abstract class Vehiculo implements Alquilable{
     protected int id;
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public Vehiculo(int id) {
-        this.id = id;
-    }
     abstract public String obtenerTipo();
 }

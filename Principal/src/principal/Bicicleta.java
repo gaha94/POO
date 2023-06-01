@@ -13,8 +13,7 @@ import java.util.Scanner;
 class Bicicleta extends Vehiculo{
     Scanner sc = new Scanner (System.in);
 
-    public Bicicleta(int id) {
-        super(id);
+    public Bicicleta(){
     }
 
 
@@ -22,13 +21,17 @@ class Bicicleta extends Vehiculo{
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
-    @Override
-    public double calcularCostoAlquiler(int horas) {
+    public double calcularCostoAlquiler() {
         System.out.println("El precio por hora es de 10 soles");
         System.out.println("¿Cuantas horas manejo el vehiculo?");
         int hour = sc.nextInt();
         int b = hour*10;
         return b;
+    }
+
+    @Override
+    public double calcularCostoAlquiler(int horas) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     
 }
